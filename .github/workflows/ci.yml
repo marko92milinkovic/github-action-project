@@ -19,7 +19,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: mami@192
 
     steps:
     - uses: actions/checkout@v3
