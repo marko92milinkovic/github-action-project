@@ -7,7 +7,7 @@ jobs:
   container-test-job:
     runs-on: [self-hosted, docker]
     container:
-      image: node:14.16
+      image: ubuntu:latest
       env:
         NODE_ENV: development
       ports:
@@ -18,4 +18,7 @@ jobs:
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+      - name: print hostname
+        run: hostname
+
 
